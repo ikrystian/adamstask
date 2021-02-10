@@ -84,3 +84,14 @@ const products = {
        }
     ]
  }
+
+ $(document).ready(function() {
+   // set active tab
+   const tabItem = $('.nav__item');
+   $(tabItem).on('click', function(e) {
+      const currentClassName = 'nav__item--active'; 
+      e.preventDefault();
+      $(tabItem).removeClass(currentClassName);
+      $(this).addClass(currentClassName);
+   })
+});
