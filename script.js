@@ -94,4 +94,9 @@ const products = {
       $(tabItem).removeClass(currentClassName);
       $(this).addClass(currentClassName);
    })
+
+   // change fav heart button 
+   $('.product__fav-button').on('click', function() {
+      $(this).html('<i class="fas fa-heart"></i>');
+   })
 });
