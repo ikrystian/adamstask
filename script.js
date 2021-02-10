@@ -99,4 +99,20 @@ const products = {
    $('.product__fav-button').on('click', function() {
       $(this).html('<i class="fas fa-heart"></i>');
    })
+
+   Object.values(products['CO']).forEach(el => {
+     let template = `
+      <li class="products__item product">
+         <button type="button" class="product__fav-button"><i class="far fa-heart"></i></button>
+         <a href="${el['product-url']}" class="product__link">
+               <div class="product__image-wrapper">
+                  <img class="product__image" src="${el['product-image-url']}" alt="">
+               </div>
+               <span class="product__price">${el['price']}</span>
+               <span class="product__title">${el['product-name']}</span>
+         </a>
+      </li>`;
+
+     $('#products').prepend(template);
+   });
 });

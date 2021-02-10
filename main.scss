@@ -55,11 +55,19 @@ body {
 
 .products {
     list-style: none;
+    display: flex;
+ 
+    &:hover {
+        .product:not(:hover) {
+            opacity: 0.5;
+        }
+    }
 }
 
 .product {
     padding: 0.5rem;
     position: relative;
+    transition: opacity 0.2s ease;
     
     &:hover {
         > button {
