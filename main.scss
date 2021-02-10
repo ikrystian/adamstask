@@ -56,7 +56,8 @@ body {
 .products {
     list-style: none;
     display: flex;
- 
+    flex-wrap: wrap;
+    
     &:hover {
         .product:not(:hover) {
             opacity: 0.5;
@@ -68,7 +69,7 @@ body {
     padding: 0.5rem;
     position: relative;
     transition: opacity 0.2s ease;
-    
+
     &:hover {
         > button {
             opacity: 1;
@@ -122,4 +123,8 @@ body {
     &__title {
         font-size: 0.875rem;
     }
+}
+
+.empty-box {
+    padding: 1rem;
 }
